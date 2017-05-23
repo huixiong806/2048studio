@@ -1,13 +1,13 @@
 /*2048studio
-*copyright orangebird 2016~2017.
-**/
+*programed by orangebird.
+*copyright orangebird 2016,all rights reserved.
+*/
 #ifndef MAX_AVG_MOVE_H
 #define MAX_AVG_MOVE_H
 #include "base2d.h"
 #include "player_move.h"
-#include <vector>
-#include <iostream>
-#include <algorithm>
+#include<vector>
+#include<iostream>
 NS_2048_BEGIN
 typedef unsigned long long ull;
 class MaxAvgMove :public Player_Move,Base2d
@@ -61,7 +61,7 @@ float MaxAvgMove::evaluation()
 			}
 	float result = -0xffffff;
 	for (int i = 0; i < 24; ++i)
-		result = std::max(result, val[i]);
+		result = max(result, val[i]);
 	return result;
 }
 int MaxAvgMove::analyze(std::vector<std::vector<int>>& board)

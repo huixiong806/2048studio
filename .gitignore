@@ -237,5 +237,5 @@ _Pvt_Extensions
 
 2048Variety3_src/
 project/
-vs_build/2048Variety3/
-vs_build/2048studio.sln
+vs_build/
+Release/

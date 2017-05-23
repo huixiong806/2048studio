@@ -31,9 +31,6 @@
     <ClInclude Include="..\..\2048studio_src\RandomlyMove.hpp">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\2048studio_src\Max-Avg_Move.hpp">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\2048studio_src\Max-Min_L_Create.hpp">
       <Filter>src</Filter>
     </ClInclude>
@@ -44,6 +41,18 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\2048studio_src\Max-Min_H_Move.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\2048studio_src\Max-Avg_H_Create.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\2048studio_src\Max-Avg_H_Move.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\2048studio_src\Max-Max_H_Move.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\2048studio_src\Max-Max_H_Create.hpp">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

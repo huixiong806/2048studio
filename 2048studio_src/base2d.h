@@ -1,6 +1,7 @@
 /*2048studio
-*copyright orangebird 2016~2017.
-**/
+ *programed by orangebird.
+ *copyright orangebird 2016,all rights reserved.
+*/
 #ifndef BASE2D_H
 #define BASE2D_H
 #include "base.h"

@@ -1,6 +1,7 @@
 /*2048studio
-*copyright orangebird 2016~2017.
-**/
+*programed by orangebird.
+*copyright orangebird 2016,all rights reserved.
+*/
 #ifndef MAX_MIN_L_CREATE_H
 #define MAX_MIN_L_CREATE_H
 #include "base2d.h"
