@@ -20,25 +20,7 @@ private:
 	int maxDepth;
 	std::pair<std::pair<int, int>, int> choice;
 	double evaluation();
-	const int weight[3][4][4] =
-	{
-		{
-			{16,15,14,4},
-			{13,12,11,3},
-			{10,9 ,8 ,2},
-			{7 ,6 ,5 ,1}
-		},{
-			{16,15,14,13},
-			{9 ,10,11,12},
-			{8 ,7 ,6 ,5 },
-			{1 ,2 ,3 ,4 }
-		},{
-			{16,15,12,4 },
-			{14,13,11,3 },
-			{10,9 ,8 ,2 },
-			{7 ,6 ,5 ,1 }
-		}
-	};
+	const double weight[4][4] ={{16,15,14,13},{9 ,10,11,12},{8 ,7 ,6 ,5 },{1 ,2 ,3 ,4 }};
 	//return value is the best choice and score
 	double MaxMax_move(int depth);
 	double MaxMax_create(int depth);
@@ -46,23 +28,21 @@ private:
 double MaxMaxHighCreate::evaluation()
 {
 	using namespace std;
-	double val[24] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-	for (int k = 0; k <= 2;++k)
+	double val[8] = {0.0};
 		for (int i = 0; i <= 3; ++i)
 			for (int j = 0; j <= 3; ++j)
 			{
-				int delta = k * 8;
-				val[delta] += weight[k][i][j] * tile[i][j];
-				val[delta+1] += weight[k][i][3 - j] * tile[i][j];
-				val[delta+2] += weight[k][3 - i][j] * tile[i][j];
-				val[delta+3] += weight[k][3 - i][3 - j] * tile[i][j];
-				val[delta+4] += weight[k][j][i] * tile[i][j];
-				val[delta+5] += weight[k][j][3 - i] * tile[i][j];
-				val[delta+6] += weight[k][3 - j][i] * tile[i][j];
-				val[delta+7] += weight[k][3 - j][3 - i] * tile[i][j];
+				val[0] += weight[i][j] * tile[i][j];
+				val[1] += weight[i][3 - j] * tile[i][j];
+				val[2] += weight[3 - i][j] * tile[i][j];
+				val[3] += weight[3 - i][3 - j] * tile[i][j];
+				val[4] += weight[j][i] * tile[i][j];
+				val[5] += weight[j][3 - i] * tile[i][j];
+				val[6] += weight[3 - j][i] * tile[i][j];
+				val[7] += weight[3 - j][3 - i] * tile[i][j];
 			}
 	double result = -0xffffff;
-	for (int i = 0; i < 24; ++i)
+	for (int i = 0; i < 8; ++i)
 		result = max(result, val[i]);
 	return result;
 }
